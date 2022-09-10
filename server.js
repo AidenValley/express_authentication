@@ -41,6 +41,8 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+// access to all of our auth routes GET /auth/login, GET 
+app.use('/auth', require('./controllers/auth'));
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
