@@ -133,7 +133,7 @@ sequelize db:create
 ├── README.md
 ├── server.js
 ```
-
+```npm install -g mocha```
 - `config.json`: Where you need to configure your project to interact with your postgres database.
 - `controllers`: The folder where all of your controllers ( routes ) will go to control the logic of your app.
 - `models`: The folder where all the models will be stored that will interact with the database.
