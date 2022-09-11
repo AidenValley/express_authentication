@@ -18,6 +18,14 @@ router.post('/login', passport.authenticate('local', {
   failureFlash: 'Either email or password is incorrect' 
 }));
 
+router.get('/logout', (req, res) => {
+  req.logOut(() => {
+    console.log('Callback');
+  }); // logs the user out of the session
+  req.flash('success', 'Logging out... See you next time!');
+  res.redirect('/');
+});
+
 // /auth.signup => inside of auth.js file
 router.post('/signup', async (req, res) => {
   // we now have access to the user info (req.body);
